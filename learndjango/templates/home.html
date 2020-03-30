@@ -8,7 +8,8 @@
     <h1> {{titles}}</h1>
     <a href="{{link}}">Home</a>
 
-    <form action="expression">
+    <form action="expression" method="post">
+        {% csrf_token %}
        Ist Value <input type="text" name="txt1"><br/>
         2nd Value <input type="text" name="txt2"><br>
         <input type="submit">

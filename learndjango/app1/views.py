@@ -9,7 +9,7 @@ def profile(request):
     return HttpResponse("Profile Page")
 
 def expression(request):
-    a=int(request.GET['txt1'])
-    b=int(request.GET['txt2'])
+    a=int(request.POST['txt1'])
+    b=int(request.POST['txt2'])
     c=a+b
     return render(request, 'home.html', {'titles':'Form Value','result': c})
